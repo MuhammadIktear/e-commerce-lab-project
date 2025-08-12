@@ -47,6 +47,7 @@ class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
         fields = ['id', 'user', 'total', 'items', 'created_at']
+        read_only_fields = ['user']
 
 class UserSerializer(serializers.ModelSerializer):
     profile = UserProfileSerializer()

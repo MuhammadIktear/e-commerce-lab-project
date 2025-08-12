@@ -147,16 +147,15 @@ def place_order(request):
     items = cart.items.all()
     if not items:
         return Response({'error': 'Cart is empty'}, status=status.HTTP_400_BAD_REQUEST)
-    
     total = sum(item.product.price * item.quantity for item in items)
-    order_data = {
-        'user': request.user,
+    serializer = OrderSerializer(data={
         'total': total,
         'items': CartItemSerializer(items, many=True).data
-    }
-    serializer = OrderSerializer(data=order_data)
+    })
+
     if serializer.is_valid():
-        serializer.save()
+        serializer.save(user=request.user)
         items.delete()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
