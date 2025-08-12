@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/mnt/d/User/Documents/final Ecommerce/backend/ECW/venv/bin/python3" "$0" "$@"
+'''exec' "/home/iktear/Downloads/final Ecommerce (2)/final Ecommerce/backend/ECW/venv/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

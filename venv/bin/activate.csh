@@ -9,7 +9,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV '/mnt/d/User/Documents/final Ecommerce/backend/ECW/venv'
+setenv VIRTUAL_ENV '/home/iktear/Downloads/final Ecommerce (2)/final Ecommerce/backend/ECW/venv'
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/"bin":$PATH"
